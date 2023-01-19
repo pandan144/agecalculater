@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <title> number reverse</title>
+	</head>
+	<body>
+		<input type="date" id="date">
+			<button id="calc" onClick="age()">Calculate</button>
+		<p id="para"></p>
+		<script>		
+			/*document.getElementById("calc")
+			.addEventListener("click",function(){
+			  var myDate = new Date(document.getElementById("date").value),
+				milli = myDate.getTime(),
+				newDate = new Date(),
+				newMilli = newDate.getTime();
+			  
+			  document.getElementById("para").innerHTML = Math.floor((newMilli - milli) / 1000 / 60 / 60 / 24 / 30 / 12); 
+			});	*/
+				
+				
+			function age(){
+				var day=new Date(document.getElementById("date").value);
+				console.log(day);
+				var	time=day.getTime();
+				console.log(time);
+				var newday=new Date();
+				console.log(newday);
+				var newtime=newday.getTime();
+				console.log(newtime)
+				var tot=newtime - time;
+				console.log(tot);
+				document.getElementById("para").innerHTML = Math.floor(tot / 1000 / 60 / 60 / 24 / 30 / 12)
+			};
+
+				
+		</script>
+	</body>
+</html>
